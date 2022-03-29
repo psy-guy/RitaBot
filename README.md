@@ -85,12 +85,12 @@
 * Copy the bot's **TOKEN**, you will need it later
 
 #### 3. Create a [Heroku account](https://id.heroku.com/signup/login) (It's free!)
-* Create a new app. It's name must be unique and composed of all lowercase letters and dashes. Something like `yourname-discordbot` is fine
+* Create a new app. Its name must be unique and composed of all lowercase letters and dashes. Something like `yourname-discordbot` is fine
 * Under **Deployment Method** select Github. Connect to your Github account and search for this repository by name.
 * Scroll down to the manual deploy section, and select the **Master** branch. Click deploy branch, and wait for the successfully deployed message.
 
 * Go to the **Resources** tab and look for the addons section. Search 'Postgres', and add a 'Hobby Dev - Free' version of Heroku Postgres. This will be automatically attached as your bot's database.
-* Go to the **Settings** tab. Click to reveal Config Variables, then add the following:
+* Go to the **Settings** tab. Click to reveal Config Variables, then add then add the following:
   * **KEY:** =  DISCORD_TOKEN
     * **Value:** = Your discord bot's token that you copied earlier.
   * **KEY:** =  NODE_MODULES_CACHE
@@ -107,12 +107,12 @@
     *  **https://discordapp.com/oauth2/authorize?&client_id=CLIENTID&scope=bot&permissions=8**
     
 * Visit the resulting URL and add your bot to any server where you have admin privileges.
-  * Once added, your bot should show in your server, **now go back to [Heroku](https://heroku.com/) and go to the "Deploy" section, scroll down to "Manual Deploy" and deploy the *master* branch. That's it your are good to go!**
-    * Your bot is now setup and ready for any translation you have for it to do. Use the commands `!tr help` and `!tr help modules` to learn more about the commands Rita has!
+  * Once added, your bot should show in your server, **now go back to [Heroku](https://heroku.com/) and go to the "Deploy" section, scroll down to "Manual Deploy" and deploy the *master* branch. That's it you're good to go!**
+    * Your bot is now set up and ready for any translation you have for it to do. Use the commands `!tr help` and `!tr help modules` to learn more about the commands Rita has!
   
 
 * **Important Note**
- * The `!tr embed` command is changeable whenever you like. It simply decides wether you would like translations to be sent as Webhooks (more user-like, profile picture) or embed (bot sends message with anembed message contintaining user profile picture.)
+ * The `!tr embed` command is changeable whenever you like. It simply decides whether you would like translations to be sent as Webhooks (more user-like, profile picture) or embed (bot sends message with an embed message containing user profile picture.)
 
 ------
 
@@ -128,7 +128,7 @@
 #### 3. Deploy Updated Fork in Heroku
 * Log in to your Heroku account.
 * Select the bot you made in Step 3 of [Setting up a New Bot](#new-bot)
-* Under **Deployment Method** make sure you have Github selected, ensure **Connect to GitHub** has the correct repository selected, Scroll down to the "Manual deploY" section, and select the **master** branch. Click deploy branch, and wait for the successfully deployed message.
+* Under **Deployment Method** make sure you have Github selected, ensure **Connect to GitHub** has the correct repository selected, Scroll down to the "Manual deploy" section, and select the **master** branch. Click deploy branch, and wait for the successfully deployed message.
 
 #### 4. Updating Database
 
@@ -148,7 +148,7 @@
 
 * If you don't already have a invite for your bot, you can replace the **CLIENTID** string in the following URL with your own apps client id: https://discordapp.com/oauth2/authorize?&client_id=**CLIENTID**&scope=bot&permissions=8 . Visit the resulting URL and add your bot to any server where you have admin privileges. Once added, your bot should show up as online.
 
-* Your bot is now setup and ready for any translation you have for it to do. Use the commands `!tr help` and `!tr help modules` to learn more about the commands Rita has!
+* Your bot is now set up and ready for any translation you have for it to do. Use the commands `!tr help` and `!tr help modules` to learn more about the commands Rita has!
 
 #### Alternative Database Settings
 Any Database that runs with [SQL Sequelize](https://sequelize.org/master/) can be used. If you want to use an alternative DB Location other than in the default directory then you can manually set this. Example: The connection to a sqlite database with the name *`database.db`* stored at the same level of this README file would be *`./database.db`*.
@@ -160,7 +160,7 @@ Within the **.env** file from the above step, set the **DATABASE_URL** to be the
 Sometimes you need to edit the Database manually, This is not something you should be playing around with unless you really know what you are doing.
 
 #### 1. Checklist
-1. Know that you are doing, if you don't then **don't** touch the DB. Simple.
+1. Know what you are doing. If you don't then **don't** touch the DB. Simple.
 2. Download and Install Postgres Admin 4, Located [Here](https://www.pgadmin.org/download/) or [Here](https://www.postgresql.org/ftp/pgadmin/pgadmin4/). *This guide will be for Windows, but it shouldn't be much different for any other OS.*
 3. Locate your credentials for you Heroku Database, Log in to **Heroku** > Select your **App** > Click **Resources** > Click **Heroku Postgres** > Click **Settings** > Click **View Credentials** (*Note: Heroku rotates credentials periodically and updates applications where this database is attached.*)
 
@@ -175,7 +175,7 @@ For a fresh install of pgAdmin, the dashboard likely contains only one server. T
   * **Port:** Keep the port at 5432, unless your credentials list otherwise
   * **Maintenance database** This is the database name in the credentials
   * **Username:**  This is the user field in the credentials
-  * **Password:** The password field located in Step 3. I highly advise checking save password so that you don’t have to copypasta this every time you want to connect.
+  * **Password:** The password field located in Step 3. I highly advise checking save password so that you don’t have to copy paste this every time you want to connect.
   * In the **SSL Tab**, mark SSL mode as require
 
 At this point, if we were to hit ‘save’ (please don’t), something very strange would happen. You’d see hundreds if not thousands of databases appear in pgAdmin. This has to do with how Heroku configures their servers. You’ll still only have access to your specific database, not those of others. In order to avoid parsing so many databases, we have to white list only those databases we care about.
@@ -218,7 +218,7 @@ This project was originally released by Aziz under the MIT license. He chose to 
 
 ### <a name="history"></a>:yum: What is Rita and who are we?
 
-*Rita is the culmination of many things, it started with a mobile game, a community of gamers, a discord server of different languages and a desire to all be understood. She is a Real-Time Translator Bot for use on Discord, Hosted using Heroku and Local Devices and Completly **100%** Free. She is maintained by a small group of users, each with different backgrounds and some learning as we go.*
+*Rita is the culmination of many things. It started with a mobile game, a community of gamers, a discord server of different languages and a desire to all be understood. She is a Real-Time Translator Bot for use on Discord, Hosted using Heroku and Local Devices and Completely **100%** Free. She is maintained by a small group of users, each with different backgrounds and some learning as we go.*
 
 ------
 
