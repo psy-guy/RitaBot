@@ -90,7 +90,7 @@
 * Scroll down to the manual deploy section, and select the **Master** branch. Click deploy branch, and wait for the successfully deployed message.
 
 * Go to the **Resources** tab and look for the addons section. Search 'Postgres', and add a 'Hobby Dev - Free' version of Heroku Postgres. This will be automatically attached as your bot's database.
-* Go to the **Settings** tab. Click to reveal Config Variables, then add then add the following:
+* Go to the **Settings** tab. Click to reveal Config Variables, then add the following:
   * **KEY:** =  DISCORD_TOKEN
     * **Value:** = Your discord bot's token that you copied earlier.
   * **KEY:** =  NODE_MODULES_CACHE
